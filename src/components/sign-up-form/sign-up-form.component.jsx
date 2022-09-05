@@ -44,6 +44,9 @@ const SignUpForm = () => {
                 email,
                 password
             );
+
+            // setCurrentUser(user);
+
             await createUserDocumentFromAuth(user, { displayName });
             resetFormFields();
         } catch (error) {
@@ -100,7 +103,6 @@ const SignUpForm = () => {
                 <Button buttonType="default" type="submit">
                     Sign Up
                 </Button>
-                <button onClick={signInWithGoogle}>log in</button>
             </form>
         </div>
     );
