@@ -1,22 +1,15 @@
-import React from "react";
-
-import SignInForm from "../../components/sign-in-form/sign-in-form.component";
 import SignUpForm from "../../components/sign-up-form/sign-up-form.component";
-import { signInWithGooglePopup } from "../../utils/firebase/firebase.utils";
+import SignInForm from "../../components/sign-in-form/sign-in-form.component";
 
-import "./authentication.styles.scss";
+import { AuthenticationContainer } from "./authentication.styles.jsx";
 
-function Authentication() {
-    const logGoogleUser = async () => {
-        const response = await signInWithGooglePopup();
-        console.log(response);
-    };
+const Authentication = () => {
     return (
-        <div className="authentication-container">
+        <AuthenticationContainer>
             <SignInForm />
             <SignUpForm />
-        </div>
+        </AuthenticationContainer>
     );
-}
+};
 
 export default Authentication;
